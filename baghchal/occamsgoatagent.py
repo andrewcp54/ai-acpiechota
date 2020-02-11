@@ -3,9 +3,9 @@ from const import Const
 from game import Game
 from move import Move
 
-class CraftyGoatAgent(Agent):
+class OccamsGoatAgent(Agent):
     def __init__(self, game : Game):
-        super(CraftyGoatAgent, self).__init__(game,Const.MARK_GOAT)
+        super(OccamsGoatAgent, self).__init__(game,Const.MARK_GOAT)
     def propose(self) -> Move:  
         moves = self.game.goatMoves()
         # returns first possible place for goat to go, starting at a1 each time. 

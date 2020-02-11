@@ -4,11 +4,11 @@ import random
 from matchup import Matchup
 from hungrytigeragent import HungryTigerAgent
 from stats import Stats
-from craftygoatagent import CraftyGoatAgent
+from occamsgoatagent import OccamsGoatAgent
 
 matchup = Matchup()
 matchup.tigerAgent = HungryTigerAgent(matchup.game)
-matchup.goatAgent = CraftyGoatAgent(matchup.game)
+matchup.goatAgent = OccamsGoatAgent(matchup.game)
 stats = Stats(matchup, 1000)
 stats.playAll()
 stats.summarize()
