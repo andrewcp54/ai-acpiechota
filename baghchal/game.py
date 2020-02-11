@@ -3,6 +3,7 @@ from const import Const
 from move import Move
 
 class Game:
+    TURN_COUNT : int = 0
     def __init__(self):
         self.reset()
 
