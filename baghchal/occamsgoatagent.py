@@ -9,10 +9,10 @@ class OccamsGoatAgent(Agent):
     def propose(self) -> Move:  
         moves = self.game.goatMoves()
 
-        if self.game._turns == 0:
-            return moves[1]
-        else:
         # returns first possible place for goat to go, starting at a1 each time. 
         # one way to make this faster, is if we know a goat has gone and been placed and NOT captured, remove that from list of moves
         # pretty sure this would only affect computation speeds, not really benefit gameplay
+        if self.game._turns == 0:
+            return moves[1]
+        else:
             return moves[0]
