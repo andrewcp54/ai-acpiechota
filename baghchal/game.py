@@ -3,10 +3,8 @@ from const import Const
 from move import Move
 
 class Game:
-    TURN_COUNT : int = 0
     def __init__(self):
         self.reset()
-
     def reset(self):
         self._board : List[List[int]] = [[Const.MARK_NONE for col in range(Const.COLS)] for row in range(Const.ROWS)]
         self._board[0][0] = Const.MARK_TIGER
