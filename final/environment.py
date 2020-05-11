@@ -2,15 +2,16 @@ from perceptron import Perceptron
 from shape import Shape, label_to_shape
 import random
 from consoleColors import bcolors
+from neuralnet import NeuralNet
 
 p = Perceptron()
 
 shapes = []
 
-for i in range(1000000):
+for i in range(10000):
     shapes.append(Shape(random.uniform(-1,1), random.uniform(-1,1)))
 
-total = 0
+'''total = 0
 correct = 0
 
 for i in range(len(shapes)):
@@ -27,4 +28,8 @@ for i in range(len(shapes)):
     else:
         print('====================\n' + bcolors.FAIL + f'Guess: {label_to_shape(guess)} \nActual: {label_to_shape(goal)}' + bcolors.ENDC)
 
-print(' Accuracy: {:.1%}'.format(correct/total))
+print('Perceptron Accuracy with 1 layer (colors): {:.1%}'.format(correct/total))
+
+'''
+
+neural_net = NeuralNet(2,1,1, 0.1)

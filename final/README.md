@@ -20,3 +20,5 @@ This is the result:
 Not bad, 91.2% is a pretty respectable accuracy. However, this isn't a very complicated "dataset", especially because this is a linearly separable problem. 
 
 Either the square is red, or it is blue. That's it.
+
+Now through movie magic the neural network is here!
