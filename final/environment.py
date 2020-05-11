@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
 from points import Point
-
+'''
 p = Perceptron()
 
 shapes = []
@@ -32,14 +32,14 @@ for i in range(len(shapes)):
     else:
         print('====================\n' + bcolors.FAIL + f'Guess: {label_to_shape(guess)} \nActual: {label_to_shape(goal)}' + bcolors.ENDC)
 
-print('Perceptron Accuracy with 1 layer (colors): {:.1%}'.format(correct/total))
+print('Perceptron Accuracy with colors: {:.1%}'.format(correct/total))
 
 '''
 
 neural_net = NeuralNet(2,3,1, 0.3)
 
 epoch = 12
-sample_size = 1000
+sample_size = 100
 
 points = []
 
@@ -87,4 +87,3 @@ correct_guess = mpatches.Patch(color='green', label='correct')
 plt.legend(handles=[incorrect_guess, correct_guess])
 
 plt.show()
-'''
