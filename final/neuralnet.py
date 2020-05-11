@@ -42,12 +42,10 @@ Output = S(Weighted Sums * Hidden + Bias)
     Oᵢ = S(Wᵢⱼ * Hᵢ + Bᵢ)
 
 '''
-
-import math
 import numpy as np
 
 def sigmoid_fcn(x):
-    return 1 / (1 + math.exp(-x))
+    return 1 / (1 + np.exp(-x))
 
 class NeuralNet:
     def __init__(self, inputN, hiddenN, outputN, lr):
@@ -62,19 +60,18 @@ class NeuralNet:
         self.w_ho = np.random.normal(0.0, pow(self.nodes_output, -0.5), (self.nodes_output, self.nodes_hidden))
 
         # bias
-        self.bias_h = np.random.rand(self.nodes_hidden, 1)
-        self.bias_o = np.random.rand(self.nodes_output, 1)
+        #self.bias_h = np.random.rand(self.nodes_hidden, 1)
+        #self.bias_o = np.random.rand(self.nodes_output, 1)
 
     def test(self, user_input):
         inputs = np.array(user_input, ndmin=2).T
 
-        print(inputs, self.w_ih)
         hidden_ins = np.dot(self.w_ih,inputs)
-        hidden_ins = np.add(hidden_ins, self.bias_h)
+        #hidden_ins = np.add(hidden_ins, self.bias_h)
         hidden_outs =  hidden_ins * sigmoid_fcn(hidden_ins)
         
         output_ins = np.dot(self.w_ho, hidden_outs)
-        output_ins = np.add(output_ins, self.bias_o)
+        #output_ins = np.add(output_ins, self.bias_o)
         output_outs = output_ins * sigmoid_fcn(output_ins)
         
         return np.array(output_outs)

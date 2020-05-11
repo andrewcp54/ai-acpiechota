@@ -22,3 +22,11 @@ Not bad, 91.2% is a pretty respectable accuracy. However, this isn't a very comp
 Either the square is red, or it is blue. That's it.
 
 Now through movie magic the neural network is here!
+
+I read through [this book](https://www.amazon.com/Make-Your-Own-Neural-Network/dp/1530826608), which helped in the creation of the neural network and was overall a good read.
+
+I tested the network against a plot of sin(x) and some points, and had it determine what points were above and what points were below, I tried a sample size of n = 10,000 and only one epoch, and the results were all over the place. 
+
+Then I tested an the network with an epoch of 60,000 and 12 epochs, and the results **still** weren't promising. 
+
+Obviously my network won't be winning any awards anytime soon, but it definitely helped me learn a lot about what happens 'under the hood' so to speak. 
